@@ -1,4 +1,4 @@
-# vps-curated-backup 20261026-160402
+# vps-curated-backup 20261027-034511
 
 plain      /etc/nginx/sites-enabled/aruaru.tokyo.conf
 plain      /etc/nginx/fastcgi.conf
@@ -76,6 +76,7 @@ ENCRYPTED  /etc/systemd/system/vps-curated-backup.service
 plain      /etc/systemd/system/daily-news-collect.timer
 ENCRYPTED  /etc/systemd/system/rs-blog.service
 plain      /etc/systemd/system/open-media-web.service
+plain      /etc/systemd/system/bdg-server.service
 plain      /etc/systemd/system/audiocafe-cron-php.service.d/knowledge-backup.conf
 plain      /etc/systemd/system/360-speaker-web.service
 plain      /etc/systemd/system/open-english-demo.service
@@ -173,6 +174,7 @@ edbddde7ac016dff7f96a01b4976b47f992eece81b5bd04e4c050994d095b848  ./config/syste
 e8de1c0e8996b6be8ea2bfaada00e40c7199219f8b832d397d7de14000a3df03  ./config/systemd/audiocafe-cron-rust.timer
 86510e62349b3d051ff2360cd8f401fac8f5e5582d2f75c13813075ec27d404e  ./config/systemd/audiocafe-php-legacy.service
 70632f765342ffed8a3f944cbe6fc6785e7fccb9271f0a9bc22a01cb84b7979e  ./config/systemd/audiocafe-tokyo-rust.service
+e85faac13d403063981722a8d7740845c4e9faa11ef64b14d9ad7ea3cdd5a0fc  ./config/systemd/bdg-server.service
 7fa8851360b3dba99ef8ac3750be796c43f73186d918df809aee8485b93b3545  ./config/systemd/daily-news-collect.service
 f686785ea6d35b87e6b29f06451b70169c2c699471de85df0e27a10af080f645  ./config/systemd/daily-news-collect.timer
 fa44eb309904f65f5e78c045ae617ee702e5edebf5a2a5fc7ab751d7c8c82b64  ./config/systemd/e-gov-server.service
@@ -216,8 +218,8 @@ aabd1bd9f8fba5bfd2393ab933b21091c9a47bb66ab9d40d701ebe3ea2eeb243  ./config/syste
 8668edf65734db6804a4bd71e1d075de09aa3fa1cc62b7aa2f7e69f017f6f5f5  ./config/systemd/runo-tokyo.service
 07df70842d75083461b8c8505cec784631bd9cf87f9f2d0bfbf999308421929c  ./config/systemd/version-control.service
 182c9f1b455687f47793dd8db392cfa4b63a7974404d6be782edc6fbd90c736e  ./config/systemd/version-control.timer
-d2f5b9ed831593cc072690e6222645643d7be6d7ea31a0e48c0c17d6a708e13b  ./config/systemd/version-control-web.service
+aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/systemd/version-control-web.service
 62dd674707680e0bbb95bc72592695891572424328ea55e8cab2a38f46ecdc40  ./config/systemd/vps-curated-backup.timer
 81408cc4235a4515fba364760021b11006f256d98c83af9bccd84f6e01c68934  ./config/systemd/vps-data-backup.service
 10e7601b026863eb0f0de360758dff42af0bd36c338ded56e707ed32f2ce32e2  ./config/systemd/vps-data-backup.timer
-a5209061e820ec12919166d9a177feda1bd22885459ff55a42c4f502d3e5d323  ./db-schema/aruaru.schema.sql
+f6e468b39cdd1091a7ab7cf5c51562ef5ac2c8cfc48d1243b447304f90fe2b94  ./db-schema/aruaru.schema.sql
