@@ -1,4 +1,4 @@
-# vps-curated-backup 20261030-034529
+# vps-curated-backup 20261031-034648
 
 plain      /etc/nginx/sites-enabled/aruaru.tokyo.conf
 plain      /etc/nginx/fastcgi.conf
@@ -99,6 +99,7 @@ ENCRYPTED  /etc/systemd/system/open-easy-web.service.d/admin-token.conf
 plain      /etc/systemd/system/open-raid-z-web.service.d/base-path.conf
 plain      /etc/systemd/system/open-cpu-web.service
 plain      /etc/systemd/system/open-backup-web.service
+plain      /etc/systemd/system/diet-crawl.timer
 plain      /etc/systemd/system/maid-news-archive.service
 plain      /etc/systemd/system/audiocafe-tokyo-rust.service
 plain      /etc/systemd/system/open-bar-web.service
@@ -108,6 +109,7 @@ plain      /etc/systemd/system/rs-guard.service
 ENCRYPTED  /etc/systemd/system/open-redmine.service
 plain      /etc/systemd/system/audiocafe-cron-php.timer
 ENCRYPTED  /etc/systemd/system/rs-sync.service
+plain      /etc/systemd/system/diet-crawl.service
 plain      /etc/systemd/system/aruaru-ime-server.service
 ENCRYPTED  /etc/systemd/system/rs-ops.service
 plain      /etc/systemd/system/knowledge-sync-push.timer
@@ -184,6 +186,8 @@ e8de1c0e8996b6be8ea2bfaada00e40c7199219f8b832d397d7de14000a3df03  ./config/syste
 e85faac13d403063981722a8d7740845c4e9faa11ef64b14d9ad7ea3cdd5a0fc  ./config/systemd/bdg-server.service
 7fa8851360b3dba99ef8ac3750be796c43f73186d918df809aee8485b93b3545  ./config/systemd/daily-news-collect.service
 f686785ea6d35b87e6b29f06451b70169c2c699471de85df0e27a10af080f645  ./config/systemd/daily-news-collect.timer
+89c9021fc22c51d3ec736d7af292a02b16d425296a9b7fa5127c4707ab7b9a92  ./config/systemd/diet-crawl.service
+f0a0f5a00ff78f16f76c5d21dd404f8055543bcf4ebb0039405a2b92fdea4e84  ./config/systemd/diet-crawl.timer
 fa44eb309904f65f5e78c045ae617ee702e5edebf5a2a5fc7ab751d7c8c82b64  ./config/systemd/e-gov-server.service
 b8737c5be2e0770e93019f60a8544ad8ff0fce54784f6ed0a29a5c19e01c870e  ./config/systemd/fbi-tokyo.service
 c0a62dc36b7816d63e70fda8126e16b5f48fbc7d8921146fce3615a0e0461cff  ./config/systemd/github-limits-check.service
@@ -237,4 +241,4 @@ aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/syste
 62dd674707680e0bbb95bc72592695891572424328ea55e8cab2a38f46ecdc40  ./config/systemd/vps-curated-backup.timer
 81408cc4235a4515fba364760021b11006f256d98c83af9bccd84f6e01c68934  ./config/systemd/vps-data-backup.service
 10e7601b026863eb0f0de360758dff42af0bd36c338ded56e707ed32f2ce32e2  ./config/systemd/vps-data-backup.timer
-00586913595587df455f489625bbf36a04791683b45d742881d908137a9368ce  ./db-schema/aruaru.schema.sql
+7fdbf2b98928d3215747dae8607fb6cecd0ed50c919c9bc422cd7c3fd74d6028  ./db-schema/aruaru.schema.sql
