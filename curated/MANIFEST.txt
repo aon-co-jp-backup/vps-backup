@@ -1,4 +1,4 @@
-# vps-curated-backup 20261102-034558
+# vps-curated-backup 20261103-034653
 
 plain      /etc/nginx/sites-enabled/aruaru.tokyo.conf
 plain      /etc/nginx/fastcgi.conf
@@ -67,6 +67,7 @@ ENCRYPTED  /etc/systemd/system/open-web-server.service.d/watchdog.conf
 plain      /etc/systemd/system/360-speaker-crawl.service
 ENCRYPTED  /etc/systemd/system/open-redmine-demo.service
 plain      /etc/systemd/system/maid-cafe-se-web.service
+ENCRYPTED  /etc/systemd/system/maid-news-archive.service.d/home.conf
 plain      /etc/systemd/system/rs-link-fusion-landing.service
 plain      /etc/systemd/system/version-control.timer
 plain      /etc/systemd/system/open-kagaku.service
@@ -241,4 +242,4 @@ aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/syste
 62dd674707680e0bbb95bc72592695891572424328ea55e8cab2a38f46ecdc40  ./config/systemd/vps-curated-backup.timer
 81408cc4235a4515fba364760021b11006f256d98c83af9bccd84f6e01c68934  ./config/systemd/vps-data-backup.service
 10e7601b026863eb0f0de360758dff42af0bd36c338ded56e707ed32f2ce32e2  ./config/systemd/vps-data-backup.timer
-941a2649a0aab4e851a11f6fcb407dbbb4e7366c9e8675a13258d7afc06354fb  ./db-schema/aruaru.schema.sql
+4780ace5a9c30157e3e4a12532e7de42113e1498d099a751e3a64679942c59e8  ./db-schema/aruaru.schema.sql
