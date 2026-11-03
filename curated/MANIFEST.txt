@@ -1,4 +1,4 @@
-# vps-curated-backup 20261103-034653
+# vps-curated-backup 20261104-034557
 
 plain      /etc/nginx/sites-enabled/aruaru.tokyo.conf
 plain      /etc/nginx/fastcgi.conf
@@ -78,6 +78,7 @@ plain      /etc/systemd/system/daily-news-collect.service
 plain      /etc/systemd/system/github-limits-check.service
 plain      /etc/systemd/system/maid-cafe-download.service
 plain      /etc/systemd/system/open-upstream-watch.service
+plain      /etc/systemd/system/vps-tidy.timer
 ENCRYPTED  /etc/systemd/system/vps-curated-backup.service
 plain      /etc/systemd/system/daily-news-collect.timer
 ENCRYPTED  /etc/systemd/system/rs-blog.service
@@ -102,6 +103,7 @@ plain      /etc/systemd/system/open-cpu-web.service
 plain      /etc/systemd/system/open-backup-web.service
 plain      /etc/systemd/system/diet-crawl.timer
 plain      /etc/systemd/system/maid-news-archive.service
+plain      /etc/systemd/system/vps-tidy.service
 plain      /etc/systemd/system/audiocafe-tokyo-rust.service
 plain      /etc/systemd/system/open-bar-web.service
 plain      /etc/systemd/system/aruaru-jobs.service
@@ -242,4 +244,6 @@ aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/syste
 62dd674707680e0bbb95bc72592695891572424328ea55e8cab2a38f46ecdc40  ./config/systemd/vps-curated-backup.timer
 81408cc4235a4515fba364760021b11006f256d98c83af9bccd84f6e01c68934  ./config/systemd/vps-data-backup.service
 10e7601b026863eb0f0de360758dff42af0bd36c338ded56e707ed32f2ce32e2  ./config/systemd/vps-data-backup.timer
-4780ace5a9c30157e3e4a12532e7de42113e1498d099a751e3a64679942c59e8  ./db-schema/aruaru.schema.sql
+6a446851f58cc3d724e4ae83d13a485b581e51d80befe2ed496fb3c692936e6d  ./config/systemd/vps-tidy.service
+b67f35610d22b6e487b1052910d3db092f70257beda52e455700f6f0e541e480  ./config/systemd/vps-tidy.timer
+40d4eb513f9f83d67805c99037af18cead03394c6416b2849021fae7276152f7  ./db-schema/aruaru.schema.sql
