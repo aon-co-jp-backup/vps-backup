@@ -1,4 +1,4 @@
-# vps-curated-backup 20261104-034557
+# vps-curated-backup 20261105-034706
 
 plain      /etc/nginx/sites-enabled/aruaru.tokyo.conf
 plain      /etc/nginx/fastcgi.conf
@@ -73,7 +73,7 @@ plain      /etc/systemd/system/version-control.timer
 plain      /etc/systemd/system/open-kagaku.service
 plain      /etc/systemd/system/realdata-pro.service.d/archive.conf
 plain      /etc/systemd/system/realdata-aruaru-db.service
-plain      /etc/systemd/system/version-control.service
+ENCRYPTED  /etc/systemd/system/version-control.service
 plain      /etc/systemd/system/daily-news-collect.service
 plain      /etc/systemd/system/github-limits-check.service
 plain      /etc/systemd/system/maid-cafe-download.service
@@ -238,7 +238,6 @@ aabd1bd9f8fba5bfd2393ab933b21091c9a47bb66ab9d40d701ebe3ea2eeb243  ./config/syste
 901c55505df256212f38b520150d13be5633af33d36fcdb7633145e99a5ed555  ./config/systemd/rs-guard.service
 60b679886e566463d5cb4bb8dd275f59d4ef243eff131a4a0c28eeb5079dfd62  ./config/systemd/rs-link-fusion-landing.service
 8668edf65734db6804a4bd71e1d075de09aa3fa1cc62b7aa2f7e69f017f6f5f5  ./config/systemd/runo-tokyo.service
-07df70842d75083461b8c8505cec784631bd9cf87f9f2d0bfbf999308421929c  ./config/systemd/version-control.service
 182c9f1b455687f47793dd8db392cfa4b63a7974404d6be782edc6fbd90c736e  ./config/systemd/version-control.timer
 aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/systemd/version-control-web.service
 62dd674707680e0bbb95bc72592695891572424328ea55e8cab2a38f46ecdc40  ./config/systemd/vps-curated-backup.timer
@@ -246,4 +245,4 @@ aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/syste
 10e7601b026863eb0f0de360758dff42af0bd36c338ded56e707ed32f2ce32e2  ./config/systemd/vps-data-backup.timer
 6a446851f58cc3d724e4ae83d13a485b581e51d80befe2ed496fb3c692936e6d  ./config/systemd/vps-tidy.service
 b67f35610d22b6e487b1052910d3db092f70257beda52e455700f6f0e541e480  ./config/systemd/vps-tidy.timer
-40d4eb513f9f83d67805c99037af18cead03394c6416b2849021fae7276152f7  ./db-schema/aruaru.schema.sql
+d39c3ac432e47e9fdcfaf909a8d11591e2a4e0db2afb4e0a58a80fea4d991346  ./db-schema/aruaru.schema.sql
