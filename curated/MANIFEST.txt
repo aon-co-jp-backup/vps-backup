@@ -1,4 +1,4 @@
-# vps-curated-backup 20261108-034545
+# vps-curated-backup 20261109-034553
 
 plain      /etc/nginx/sites-enabled/aruaru.tokyo.conf
 plain      /etc/nginx/fastcgi.conf
@@ -34,6 +34,7 @@ plain      /etc/systemd/system/aruaru-llm.service
 plain      /etc/systemd/system/aon-tokyo-server.service
 plain      /etc/systemd/system/postgresql.service.d/10-autorestart.conf
 ENCRYPTED  /etc/systemd/system/rs-sync-demo.service
+plain      /etc/systemd/system/open-cosmo-web.service
 plain      /etc/systemd/system/vps-data-backup.service
 plain      /etc/systemd/system/open-english-demo.service.d/smtp.conf
 plain      /etc/systemd/system/open-english-demo.service.d/10-autorestart.conf
@@ -51,8 +52,10 @@ plain      /etc/systemd/system/aruaru.tokyo.service.d/tokoro.conf
 plain      /etc/systemd/system/apache2.service
 plain      /etc/systemd/system/open-english.service
 plain      /etc/systemd/system/rs-ec.service.d/10-autorestart.conf
+ENCRYPTED  /etc/systemd/system/rs-ec.service.d/20-smtp.conf
 plain      /etc/systemd/system/httpd.service.d/php-fpm.conf
 plain      /etc/systemd/system/rs-blog.service.d/10-autorestart.conf
+ENCRYPTED  /etc/systemd/system/rs-blog.service.d/20-smtp.conf
 plain      /etc/systemd/system/icpo-tokyo.service
 plain      /etc/systemd/system/runo-tokyo.service
 plain      /etc/systemd/system/version-control-web.service
@@ -81,6 +84,8 @@ plain      /etc/systemd/system/open-cg-cad.service.d/10-autorestart.conf
 plain      /etc/systemd/system/vps-data-backup.timer
 plain      /etc/systemd/system/open-web-server.service.d/admin-token.conf
 ENCRYPTED  /etc/systemd/system/open-web-server.service.d/watchdog.conf
+plain      /etc/systemd/system/RS-EC-web.service
+plain      /etc/systemd/system/aruaru-IME-web.service
 plain      /etc/systemd/system/360-speaker-crawl.service
 plain      /etc/systemd/system/rs-link-fusion-landing.service.d/10-autorestart.conf
 ENCRYPTED  /etc/systemd/system/open-redmine-demo.service
@@ -117,12 +122,15 @@ plain      /etc/systemd/system/audiocafe-tokyo-rust.service.d/10-autorestart.con
 plain      /etc/systemd/system/e-gov-server.service
 ENCRYPTED  /etc/systemd/system/aruaru-search.service
 plain      /etc/systemd/system/nginx.service.d/php-fpm.conf
+plain      /etc/systemd/system/aruaru-llm-web.service
 plain      /etc/systemd/system/github-limits-check.timer
 plain      /etc/systemd/system/aruaru.tokyo.service
 plain      /etc/systemd/system/news-archive-push.service
 plain      /etc/systemd/system/make-disk-web.service
 plain      /etc/systemd/system/open-english-autoupdate.service
+plain      /etc/systemd/system/RS-Red-web.service
 ENCRYPTED  /etc/systemd/system/open-easy-web.service.d/admin-token.conf
+plain      /etc/systemd/system/open-easy-web-web.service
 plain      /etc/systemd/system/open-raid-z-web.service.d/10-autorestart.conf
 plain      /etc/systemd/system/open-raid-z-web.service.d/base-path.conf
 plain      /etc/systemd/system/open-cpu-web.service
@@ -131,6 +139,7 @@ plain      /etc/systemd/system/diet-crawl.timer
 plain      /etc/systemd/system/open-kagaku.service.d/10-autorestart.conf
 plain      /etc/systemd/system/maid-cafe-download.service.d/10-autorestart.conf
 plain      /etc/systemd/system/maid-news-archive.service
+plain      /etc/systemd/system/RS-Blog-web.service
 plain      /etc/systemd/system/vps-tidy.service
 plain      /etc/systemd/system/audiocafe-tokyo-rust.service
 plain      /etc/systemd/system/open-bar-web.service
@@ -158,6 +167,7 @@ plain      /etc/systemd/system/audiocafe-php-legacy.service
 plain      /etc/systemd/system/open-english-autoupdate.timer
 plain      /etc/systemd/system/realdata-aruaru-db.service.d/10-autorestart.conf
 plain      /etc/systemd/system/realdata-pro.service
+plain      /etc/systemd/system/RS-Ops-web.service
 plain      /etc/systemd/system/open-vps-claude-web.service
 plain      /etc/systemd/system/audiocafe-cron-rust.timer
 plain      /etc/systemd/system/knowledge-sync-push.service
@@ -208,12 +218,14 @@ bae35556a99c07765b576f6eda47c9fd770035a8971c783aa31efb21b34067a7  ./config/syste
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/aruaru-db-web.service.d/10-autorestart.conf
 5efa707a133895978a2702986628844f78372b216063c8289d934c056c2a98e2  ./config/systemd/aruaru-db-web.service.d/base-path.conf
 f38b649fe10559a447f9f39a401d4ff6e704de56d6a4acc453a244381208857a  ./config/systemd/aruaru-ime-server.service
+286308b430b89ea02ee8e31349d26bb9c4e648a5bc7acedc83432e606f817001  ./config/systemd/aruaru-IME-web.service
 27c5d7e0a41fddf731ccff653848f0432c6bab3d55160797c703e26d5bae7665  ./config/systemd/aruaru-jobs.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/aruaru-jobs.service.d/10-autorestart.conf
 8198b33513c17cc903441d2df8af850d801df4fc30dfbc479f04066b0b27454e  ./config/systemd/aruaru-llm.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/aruaru-llm.service.d/10-autorestart.conf
 f6e049fcc634cb7c4c8903da63946afd35379ca840f572a17b95a151448f29a9  ./config/systemd/aruaru-llm.service.d/aruaru-search.conf
 cf97dfb2b15c66f7a700319fb8ef4ef6a62c8f4bb2f4e8aac461c57bcfe7c040  ./config/systemd/aruaru-llm.service.d/ocr.conf
+ab9dd568fdaab1dad0bfc783c55468d62adaba6f615268f87873f3d39f6b7454  ./config/systemd/aruaru-llm-web.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/aruaru-search.service.d/10-autorestart.conf
 438c44922576da858f180682571fcb67cb895775de68c0c688cab8484c695bf9  ./config/systemd/aruaru-search.service.d/archive.conf
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/aruaru-server.service.d/10-autorestart.conf
@@ -262,8 +274,10 @@ d508c70e7995d1c20fb80d883933a5fa9242a6e69758124fd20b830261b4e188  ./config/syste
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/open-cg-cad-demo.service.d/10-autorestart.conf
 eecde24e9761036adfb49ffd540047dc4b7167135abc1ad28a069be3e73476ee  ./config/systemd/open-cg-cad.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/open-cg-cad.service.d/10-autorestart.conf
+fcf3df66dc67b0d1ad3c9a3f66b83aba101e67f2aede26ca1bfe40c69697a118  ./config/systemd/open-cosmo-web.service
 b6550cf944374f2238d70b8bdccb082335388d4fbf91e24c367245bb1f17f1d5  ./config/systemd/open-cpu-web.service
 6c909437303b0fd2225522aab728c2667ecd0243442ef62b9910a8501a06c23a  ./config/systemd/open-cuda-web.service
+f204b270cb8e62fd61d3a1c01afd6285390ca4ed906c50d961fbccd74a73bdc3  ./config/systemd/open-easy-web-web.service
 333a7ea26198062f336cef8f2795b225eabe3b5a28436024a8b55cf4714171e7  ./config/systemd/open-english-autoupdate.service
 730b7983ffa1a62d8691edf53506cc6b1d841fd4948656915395f92e93bd3588  ./config/systemd/open-english-autoupdate.timer
 7bc54a231b394ec4e92986798ca019d8bc2906bc54f22ee8ce5d485a4fd39c6f  ./config/systemd/open-english-demo.service
@@ -296,12 +310,16 @@ bbe94a59051a90eaa47d06ff314a6865777efe79e7af4de7710dccceb22fce27  ./config/syste
 9be4f1681796a98a836ece832ebeb81986c7b6363a759b56bd20692d5063d1e7  ./config/systemd/realdata-pro.service.d/archive.conf
 aabd1bd9f8fba5bfd2393ab933b21091c9a47bb66ab9d40d701ebe3ea2eeb243  ./config/systemd/rpoem-web.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/rs-blog.service.d/10-autorestart.conf
+ff86955036f5fa6aa20a3f6047b5191111df10baa36142e16e7950e8b52caa36  ./config/systemd/RS-Blog-web.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/rs-ec.service.d/10-autorestart.conf
+35f608c1c19440e1916430a7afc183a619596324ef48b549c81374310cbef718  ./config/systemd/RS-EC-web.service
 901c55505df256212f38b520150d13be5633af33d36fcdb7633145e99a5ed555  ./config/systemd/rs-guard.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/rs-guard.service.d/10-autorestart.conf
 60b679886e566463d5cb4bb8dd275f59d4ef243eff131a4a0c28eeb5079dfd62  ./config/systemd/rs-link-fusion-landing.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/rs-link-fusion-landing.service.d/10-autorestart.conf
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/rs-ops.service.d/10-autorestart.conf
+58197498bca654bb69d60f9f0237b376939e0564ce7820b8f47540d50338e620  ./config/systemd/RS-Ops-web.service
+fba998ec0cf4329a06321904057e65aefbedd3082f6ecff6618c26d74ea839fe  ./config/systemd/RS-Red-web.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/rs-sync-demo.service.d/10-autorestart.conf
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/rs-sync.service.d/10-autorestart.conf
 8668edf65734db6804a4bd71e1d075de09aa3fa1cc62b7aa2f7e69f017f6f5f5  ./config/systemd/runo-tokyo.service
@@ -313,4 +331,4 @@ aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/syste
 10e7601b026863eb0f0de360758dff42af0bd36c338ded56e707ed32f2ce32e2  ./config/systemd/vps-data-backup.timer
 6a446851f58cc3d724e4ae83d13a485b581e51d80befe2ed496fb3c692936e6d  ./config/systemd/vps-tidy.service
 b67f35610d22b6e487b1052910d3db092f70257beda52e455700f6f0e541e480  ./config/systemd/vps-tidy.timer
-0daaf29a6da1f5fd609320e60b0085da4c6e06a0bc53fcc702e50e1fe5ec356e  ./db-schema/aruaru.schema.sql
+caefd929d660dc679b370c8c8cdfde1488e4100eaabd8bc150b0823088a5b73e  ./db-schema/aruaru.schema.sql
