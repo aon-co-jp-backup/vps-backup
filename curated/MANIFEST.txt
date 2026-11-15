@@ -1,4 +1,4 @@
-# vps-curated-backup 20261115-034552
+# vps-curated-backup 20261116-034553
 
 plain      /etc/nginx/sites-enabled/aruaru.tokyo.conf
 plain      /etc/nginx/fastcgi.conf
@@ -153,6 +153,7 @@ plain      /etc/systemd/system/rs-guard.service
 ENCRYPTED  /etc/systemd/system/open-redmine.service
 plain      /etc/systemd/system/audiocafe-cron-php.timer
 ENCRYPTED  /etc/systemd/system/rs-sync.service
+plain      /etc/systemd/system/open-gitea-web.service
 plain      /etc/systemd/system/runo-tokyo.service.d/10-autorestart.conf
 plain      /etc/systemd/system/bdg-server.service.d/10-autorestart.conf
 plain      /etc/systemd/system/diet-crawl.service
@@ -169,6 +170,7 @@ ENCRYPTED  /etc/systemd/system/aruaru-db-web.service
 plain      /etc/systemd/system/karu-tokyo-server.service.d/10-autorestart.conf
 ENCRYPTED  /etc/systemd/system/open-gitea.service
 plain      /etc/systemd/system/audiocafe-php-legacy.service
+plain      /etc/systemd/system/easy-web-intros-web.service
 plain      /etc/systemd/system/open-english-autoupdate.timer
 plain      /etc/systemd/system/realdata-aruaru-db.service.d/10-autorestart.conf
 plain      /etc/systemd/system/realdata-pro.service
@@ -251,6 +253,7 @@ e85faac13d403063981722a8d7740845c4e9faa11ef64b14d9ad7ea3cdd5a0fc  ./config/syste
 f686785ea6d35b87e6b29f06451b70169c2c699471de85df0e27a10af080f645  ./config/systemd/daily-news-collect.timer
 89c9021fc22c51d3ec736d7af292a02b16d425296a9b7fa5127c4707ab7b9a92  ./config/systemd/diet-crawl.service
 f0a0f5a00ff78f16f76c5d21dd404f8055543bcf4ebb0039405a2b92fdea4e84  ./config/systemd/diet-crawl.timer
+1da5f77e65856c8e1244b5d0e267660e21118897ae5470a711b42f1fdb6398fc  ./config/systemd/easy-web-intros-web.service
 fa44eb309904f65f5e78c045ae617ee702e5edebf5a2a5fc7ab751d7c8c82b64  ./config/systemd/e-gov-server.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/e-gov-server.service.d/10-autorestart.conf
 b8737c5be2e0770e93019f60a8544ad8ff0fce54784f6ed0a29a5c19e01c870e  ./config/systemd/fbi-tokyo.service
@@ -294,6 +297,7 @@ c61547517405e861c16f5aaa574e8ca24365f36d91ca69742b41f40ef3813e84  ./config/syste
 4a182b42f9b011ced36e2de94bff36509c8caed950ecb33befd0ec56277e6d94  ./config/systemd/open-english.service.d/moved.conf
 703f6d0e9f7686455a44dea266f67e3c3f1b6d30b8919cda6a53032be8cd2a9f  ./config/systemd/open-english.service.d/server-root.conf
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/open-gitea.service.d/10-autorestart.conf
+e9d09f01fd44c4a24f13236f39feeba007ddfc1a872f9295a54bc7540d5a2136  ./config/systemd/open-gitea-web.service
 728534ff834f5965b017816de8aca622789dc8f10e39a16471325505e340473b  ./config/systemd/open-kagaku.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/open-kagaku.service.d/10-autorestart.conf
 b2b3030f07cacff83f6dffe52885c1e4e176e771724eca143e1041a4bbb1b3e6  ./config/systemd/open-media-web.service
@@ -341,4 +345,4 @@ aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/syste
 10e7601b026863eb0f0de360758dff42af0bd36c338ded56e707ed32f2ce32e2  ./config/systemd/vps-data-backup.timer
 6a446851f58cc3d724e4ae83d13a485b581e51d80befe2ed496fb3c692936e6d  ./config/systemd/vps-tidy.service
 b67f35610d22b6e487b1052910d3db092f70257beda52e455700f6f0e541e480  ./config/systemd/vps-tidy.timer
-12fcd21de43256b6af3b298efc468061a88aeaf9841ad9d206acae83a60df2f2  ./db-schema/aruaru.schema.sql
+a3b16ca20eee61269cca4bde80ae907bdcb34dd89594080da03fe8ca72652727  ./db-schema/aruaru.schema.sql
