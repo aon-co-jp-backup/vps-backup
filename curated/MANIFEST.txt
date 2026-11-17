@@ -1,4 +1,4 @@
-# vps-curated-backup 20261117-034641
+# vps-curated-backup 20261118-034612
 
 plain      /etc/nginx/sites-enabled/aruaru.tokyo.conf
 plain      /etc/nginx/fastcgi.conf
@@ -108,6 +108,7 @@ plain      /etc/systemd/system/open-upstream-watch.service
 plain      /etc/systemd/system/vps-tidy.timer
 ENCRYPTED  /etc/systemd/system/vps-curated-backup.service
 plain      /etc/systemd/system/daily-news-collect.timer
+plain      /etc/systemd/system/easy-web-intros-refresh.timer
 ENCRYPTED  /etc/systemd/system/rs-blog.service
 plain      /etc/systemd/system/open-media-web.service
 plain      /etc/systemd/system/bdg-server.service
@@ -158,6 +159,7 @@ plain      /etc/systemd/system/runo-tokyo.service.d/10-autorestart.conf
 plain      /etc/systemd/system/bdg-server.service.d/10-autorestart.conf
 plain      /etc/systemd/system/diet-crawl.service
 plain      /etc/systemd/system/open-runo-gateway.service.d/10-autorestart.conf
+plain      /etc/systemd/system/easy-web-intros-refresh.service
 plain      /etc/systemd/system/aruaru-ime-server.service
 plain      /etc/systemd/system/open-gitea.service.d/10-autorestart.conf
 ENCRYPTED  /etc/systemd/system/rs-ops.service
@@ -253,6 +255,8 @@ e85faac13d403063981722a8d7740845c4e9faa11ef64b14d9ad7ea3cdd5a0fc  ./config/syste
 f686785ea6d35b87e6b29f06451b70169c2c699471de85df0e27a10af080f645  ./config/systemd/daily-news-collect.timer
 89c9021fc22c51d3ec736d7af292a02b16d425296a9b7fa5127c4707ab7b9a92  ./config/systemd/diet-crawl.service
 f0a0f5a00ff78f16f76c5d21dd404f8055543bcf4ebb0039405a2b92fdea4e84  ./config/systemd/diet-crawl.timer
+b9211b725c44d21a6578883c640e1b00d3c74c52656424fd16e29a813ea89406  ./config/systemd/easy-web-intros-refresh.service
+fefd751f85e7faf2642abefcd792666acd200ca4dc8f6eaf8f3e00c143f1543c  ./config/systemd/easy-web-intros-refresh.timer
 1da5f77e65856c8e1244b5d0e267660e21118897ae5470a711b42f1fdb6398fc  ./config/systemd/easy-web-intros-web.service
 fa44eb309904f65f5e78c045ae617ee702e5edebf5a2a5fc7ab751d7c8c82b64  ./config/systemd/e-gov-server.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/e-gov-server.service.d/10-autorestart.conf
@@ -345,4 +349,4 @@ aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/syste
 10e7601b026863eb0f0de360758dff42af0bd36c338ded56e707ed32f2ce32e2  ./config/systemd/vps-data-backup.timer
 6a446851f58cc3d724e4ae83d13a485b581e51d80befe2ed496fb3c692936e6d  ./config/systemd/vps-tidy.service
 b67f35610d22b6e487b1052910d3db092f70257beda52e455700f6f0e541e480  ./config/systemd/vps-tidy.timer
-4e23b93534e52112174df86bd6ac259bfb2dfb8600362880268970758be5705c  ./db-schema/aruaru.schema.sql
+37d11824c701c1369e130ed2e1e56790c78bad21483d6fe7e266dd9fa2f0bd14  ./db-schema/aruaru.schema.sql
