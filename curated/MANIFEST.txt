@@ -1,4 +1,4 @@
-# vps-curated-backup 20261118-034612
+# vps-curated-backup 20261119-034602
 
 plain      /etc/nginx/sites-enabled/aruaru.tokyo.conf
 plain      /etc/nginx/fastcgi.conf
@@ -39,7 +39,9 @@ plain      /etc/systemd/system/open-cosmo-web.service
 plain      /etc/systemd/system/vps-data-backup.service
 plain      /etc/systemd/system/open-english-demo.service.d/smtp.conf
 plain      /etc/systemd/system/open-english-demo.service.d/10-autorestart.conf
+plain      /etc/systemd/system/open-english-demo.service.d/30-serverroot.conf
 ENCRYPTED  /etc/systemd/system/aruaru-server.service
+ENCRYPTED  /etc/systemd/system/aruaru-db-web.service.before-envfile-202611181429
 plain      /etc/systemd/system/aon-tokyo-server.service.d/10-autorestart.conf
 plain      /etc/systemd/system/aon-tokyo-server.service.d/hidden.conf
 plain      /etc/systemd/system/aruaru-search.service.d/10-autorestart.conf
@@ -161,6 +163,7 @@ plain      /etc/systemd/system/diet-crawl.service
 plain      /etc/systemd/system/open-runo-gateway.service.d/10-autorestart.conf
 plain      /etc/systemd/system/easy-web-intros-refresh.service
 plain      /etc/systemd/system/aruaru-ime-server.service
+ENCRYPTED  /etc/systemd/system/open-gitea.service.before-envfile-202611181429
 plain      /etc/systemd/system/open-gitea.service.d/10-autorestart.conf
 ENCRYPTED  /etc/systemd/system/rs-ops.service
 plain      /etc/systemd/system/knowledge-sync-push.timer
@@ -294,6 +297,7 @@ f204b270cb8e62fd61d3a1c01afd6285390ca4ed906c50d961fbccd74a73bdc3  ./config/syste
 730b7983ffa1a62d8691edf53506cc6b1d841fd4948656915395f92e93bd3588  ./config/systemd/open-english-autoupdate.timer
 7bc54a231b394ec4e92986798ca019d8bc2906bc54f22ee8ce5d485a4fd39c6f  ./config/systemd/open-english-demo.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/open-english-demo.service.d/10-autorestart.conf
+703f6d0e9f7686455a44dea266f67e3c3f1b6d30b8919cda6a53032be8cd2a9f  ./config/systemd/open-english-demo.service.d/30-serverroot.conf
 f3d5fd05e38607ea0083e14e518e6be04d5d42738a49f077a19d5275cf1c43de  ./config/systemd/open-english-demo.service.d/smtp.conf
 c7292b7d43c83fe68c20c01809d2d2756705fef31da7dea16ba2f56986756ebb  ./config/systemd/open-english.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/open-english.service.d/10-autorestart.conf
@@ -349,4 +353,4 @@ aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/syste
 10e7601b026863eb0f0de360758dff42af0bd36c338ded56e707ed32f2ce32e2  ./config/systemd/vps-data-backup.timer
 6a446851f58cc3d724e4ae83d13a485b581e51d80befe2ed496fb3c692936e6d  ./config/systemd/vps-tidy.service
 b67f35610d22b6e487b1052910d3db092f70257beda52e455700f6f0e541e480  ./config/systemd/vps-tidy.timer
-37d11824c701c1369e130ed2e1e56790c78bad21483d6fe7e266dd9fa2f0bd14  ./db-schema/aruaru.schema.sql
+e4ea140111353e916e7d4ff2a6e0e9eaa9ca73b99dc4ce6608917c387e61efa1  ./db-schema/aruaru.schema.sql
