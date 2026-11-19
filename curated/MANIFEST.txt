@@ -1,4 +1,4 @@
-# vps-curated-backup 20261119-034602
+# vps-curated-backup 20261120-034542
 
 plain      /etc/nginx/sites-enabled/aruaru.tokyo.conf
 plain      /etc/nginx/fastcgi.conf
@@ -49,6 +49,7 @@ plain      /etc/systemd/system/aruaru-search.service.d/archive.conf
 plain      /etc/systemd/system/aruaru-llm.service.d/10-autorestart.conf
 plain      /etc/systemd/system/aruaru-llm.service.d/aruaru-search.conf
 plain      /etc/systemd/system/aruaru-llm.service.d/ocr.conf
+plain      /etc/systemd/system/pl2pl-web.service
 plain      /etc/systemd/system/aruaru-jobs.service.d/10-autorestart.conf
 plain      /etc/systemd/system/aruaru.tokyo.service.d/10-autorestart.conf
 plain      /etc/systemd/system/aruaru.tokyo.service.d/tokoro.conf
@@ -63,6 +64,7 @@ plain      /etc/systemd/system/icpo-tokyo.service
 plain      /etc/systemd/system/runo-tokyo.service
 plain      /etc/systemd/system/version-control-web.service
 plain      /etc/systemd/system/open-mirror-web.service
+plain      /etc/systemd/system/aruaru-pro.service
 plain      /etc/systemd/system/rs-ops.service.d/10-autorestart.conf
 plain      /etc/systemd/system/vps-curated-backup.timer
 plain      /etc/systemd/system/360-speaker-crawl.timer
@@ -173,6 +175,7 @@ plain      /etc/systemd/system/pdf-r2l-rs-web.service
 ENCRYPTED  /etc/systemd/system/rs-ec.service
 ENCRYPTED  /etc/systemd/system/aruaru-db-web.service
 plain      /etc/systemd/system/karu-tokyo-server.service.d/10-autorestart.conf
+plain      /etc/systemd/system/aruaru-pro-db.service
 ENCRYPTED  /etc/systemd/system/open-gitea.service
 plain      /etc/systemd/system/audiocafe-php-legacy.service
 plain      /etc/systemd/system/easy-web-intros-web.service
@@ -238,6 +241,8 @@ f38b649fe10559a447f9f39a401d4ff6e704de56d6a4acc453a244381208857a  ./config/syste
 f6e049fcc634cb7c4c8903da63946afd35379ca840f572a17b95a151448f29a9  ./config/systemd/aruaru-llm.service.d/aruaru-search.conf
 cf97dfb2b15c66f7a700319fb8ef4ef6a62c8f4bb2f4e8aac461c57bcfe7c040  ./config/systemd/aruaru-llm.service.d/ocr.conf
 ab9dd568fdaab1dad0bfc783c55468d62adaba6f615268f87873f3d39f6b7454  ./config/systemd/aruaru-llm-web.service
+a17f93fdeb99aea3bb443618e7f2def09dda611bb2de4aebe66bb04c9a08b7b5  ./config/systemd/aruaru-pro-db.service
+cbd888111e768478b1435e79f4b5e7034e012c8a4e171c39d40c8fc4f9110459  ./config/systemd/aruaru-pro.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/aruaru-search.service.d/10-autorestart.conf
 438c44922576da858f180682571fcb67cb895775de68c0c688cab8484c695bf9  ./config/systemd/aruaru-search.service.d/archive.conf
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/aruaru-server.service.d/10-autorestart.conf
@@ -324,6 +329,7 @@ f82a3bbafca8c0a5908d3f5ce2d57d829b101cd7f706a27f7eeb2ede6f76d4cc  ./config/syste
 e0fc47d88a53572489d52c5f8b0b414c84034dd4768f74248c5cbb4b6d5bc6f7  ./config/systemd/open-web-server.service.d/admin-token.conf
 732ba89c5750ad44d7deb36c4f4a1a477b606bca6b60b37a0481a1975c4952d8  ./config/systemd/pdf-r2l-rs-web.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/php-fpm.service.d/10-autorestart.conf
+0ef7018d4b60dd7448b26665de1cb664ee0f4657969d5d4343bc058ea6a925f7  ./config/systemd/pl2pl-web.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/postgresql.service.d/10-autorestart.conf
 9abfadddbcc6a47a580aef4cfee02f377ce764e3da5869d047bb53b1f0e41478  ./config/systemd/realdata-aruaru-db.service
 28cfd3e3920635387cc4eacd0a5802423262a7d43c743c8223957e3d0d5a2bd9  ./config/systemd/realdata-aruaru-db.service.d/10-autorestart.conf
@@ -353,4 +359,4 @@ aed635b900fcde968dc2f7ffb1a97e3318fa42e2d8749941606a28ab7e3615cc  ./config/syste
 10e7601b026863eb0f0de360758dff42af0bd36c338ded56e707ed32f2ce32e2  ./config/systemd/vps-data-backup.timer
 6a446851f58cc3d724e4ae83d13a485b581e51d80befe2ed496fb3c692936e6d  ./config/systemd/vps-tidy.service
 b67f35610d22b6e487b1052910d3db092f70257beda52e455700f6f0e541e480  ./config/systemd/vps-tidy.timer
-e4ea140111353e916e7d4ff2a6e0e9eaa9ca73b99dc4ce6608917c387e61efa1  ./db-schema/aruaru.schema.sql
+9c2308c92fa1f1b83a054a91a8313459eebec4861db32376fd54eebad63c7d61  ./db-schema/aruaru.schema.sql
